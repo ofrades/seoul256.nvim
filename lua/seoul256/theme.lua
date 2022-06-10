@@ -72,7 +72,7 @@ M.editor = {
     NonText = { fg = colors.disabled },
     Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { fg = colors.fg, bg = colors.float },
-    NormalNC = {}, -- TODO
+    NormalNC = { fg = colors.pink},
     Pmenu = { fg = colors.text, bg = colors.contrast },
     PmenuSbar = { fg = colors.text, bg = colors.contrast },
     PmenuSel = { fg = colors.accent, bg = colors.active },
@@ -88,18 +88,18 @@ M.editor = {
     SpellRare = { fg = colors.purple, bg = colors.none, style = "undercurl,italic" },
     StatusLine = { fg = colors.fg, bg = colors.bg_alt },
     StatusLineNC = { fg = colors.text, bg = colors.disabled },
-    Substitute = {}, -- TODO
+    Substitute = { fg = colors.red },
     TabLineFill = { fg = colors.fg },
     Tabline = { fg = colors.fg },
     TablineSel = { fg = colors.bg, bg = colors.accent },
-    TermCursor = {}, -- TODO
-    TermCursorNC = {}, -- TODO
+    TermCursor = { bg = colors.green },
+    TermCursorNC = { bg = colors.gray},
     Title = { fg = colors.green, bg = colors.none, style = "bold" },
     VertSplit = { fg = colors.bg },
     Visual = { fg = colors.none, bg = colors.selection },
     VisualNOS = { fg = colors.none, bg = colors.selection },
     WarningMsg = { fg = colors.yellow },
-    Whitespace = {}, -- TODO
+    Whitespace = { fg = colors.gray },
     WildMenu = { fg = colors.orange, bg = colors.none, style = "bold" },
 
     -- GUI only
@@ -120,7 +120,7 @@ M.treesitter = {
     TSConstMacro = { fg = colors.blue },
     TSConstant = { fg = colors.yellow },
     TSConstructor = { fg = colors.purple },
-    TSDanger = {}, -- TODO
+    TSDanger = { fg = colors.bg, bg = colors.red },
     TSEmphasis = { fg = colors.paleblue },
     TSEnvironment = {}, -- TODO
     TSEnvironmentName = {}, -- TODO
@@ -138,7 +138,7 @@ M.treesitter = {
     TSKeywordReturn = {}, -- TODO
     TSLabel = { fg = colors.red },
     TSLiteral = { fg = colors.fg },
-    TSMath = {}, -- TODO
+    TSMath = { fg = colors.bg, bg = colors.blue },
     TSMethod = { fg = colors.blue },
     TSNamespace = { fg = colors.yellow },
     TSNone = {}, -- TODO
@@ -177,7 +177,7 @@ M.treesitter = {
 -- Lsp highlight groups
 -- Type `:h lsp-highlight` for more informations
 M.lsp = {
-    LspCodeLens = {}, -- TODO
+    LspCodeLens = { fg = colors.green }, -- TODO
     LspDiagnosticsDefaultError = { fg = colors.error },
     LspDiagnosticsDefaultHint = { fg = colors.purple },
     LspDiagnosticsDefaultInformation = { fg = colors.paleblue },
@@ -257,26 +257,7 @@ M.plugins = {
         TelescopeSelection = { fg = colors.purple },
         TelescopeMatching = { fg = colors.cyan },
         TelescopeNormal = { fg = colors.fg, bg = colors.float },
-    },
-
-    NvimTree = {
-        NvimTreeNormal = { fg = colors.fg, bg = colors.sidebar },
-        NvimTreeRootFolder = { fg = colors.blue, style = "bold" },
-        NvimTreeGitDirty = { fg = colors.yellow },
-        NvimTreeGitNew = { fg = colors.green },
-        NvimTreeImageFile = { fg = colors.yellow },
-        NvimTreeExecFile = { fg = colors.green },
-        NvimTreeSpecialFile = { fg = colors.purple, style = "underline" },
-        NvimTreeFolderName = { fg = colors.paleblue },
-        NvimTreeEmptyFolderName = { fg = colors.disabled },
-        NvimTreeFolderIcon = { fg = colors.accent },
-        NvimTreeIndentMarker = { fg = colors.disabled },
-
-        -- TODO not sure this goes here
-        LspDiagnosticsError = { fg = colors.error },
-        LspDiagnosticsWarning = { fg = colors.yellow },
-        LspDiagnosticsInformation = { fg = colors.paleblue },
-        LspDiagnosticsHint = { fg = colors.purple },
+        TelescopeBorder = { },
     },
 
     WhichKey = {
@@ -288,40 +269,6 @@ M.plugins = {
         WhichKeyFloat = { bg = colors.float },
     },
 
-    LspSaga = {
-        DiagnosticError = { fg = colors.error },
-        DiagnosticWarning = { fg = colors.yellow },
-        DiagnosticInformation = { fg = colors.paleblue },
-        DiagnosticHint = { fg = colors.purple },
-        DiagnosticTruncateLine = { fg = colors.fg },
-        LspFloatWinNormal = { bg = colors.bg },
-        LspFloatWinBorder = { fg = colors.purple },
-        LspSagaBorderTitle = { fg = colors.cyan },
-        LspSagaHoverBorder = { fg = colors.paleblue },
-        LspSagaRenameBorder = { fg = colors.green },
-        LspSagaDefPreviewBorder = { fg = colors.green },
-        LspSagaCodeActionBorder = { fg = colors.blue },
-        LspSagaFinderSelection = { fg = colors.green },
-        LspSagaCodeActionTitle = { fg = colors.paleblue },
-        LspSagaCodeActionContent = { fg = colors.purple },
-        LspSagaSignatureHelpBorder = { fg = colors.pink },
-        ReferencesCount = { fg = colors.purple },
-        DefinitionCount = { fg = colors.purple },
-        DefinitionIcon = { fg = colors.blue },
-        ReferencesIcon = { fg = colors.blue },
-        TargetWord = { fg = colors.cyan },
-    },
-
-    BufferLine = {
-        BufferLineIndicatorSelected = { fg = colors.accent },
-        BufferLineFill = { bg = colors.bg_alt },
-    },
-
-    Sneak = {
-        Sneak = { fg = colors.bg, bg = colors.accent },
-        SneakScope = { bg = colors.selection },
-    },
-
     IndentBlankline = {
         IndentBlanklineChar = { fg = colors.indentline },
         IndentBlanklineContextChar = { fg = colors.indentline },
@@ -330,13 +277,6 @@ M.plugins = {
     NvimDap = {
         DapBreakpoint = { fg = colors.red },
         DapStopped = { fg = colors.green },
-    },
-
-    DashboardNvim = {
-        DashboardCenter = { fg = colors.cyan },
-        DashboardFooter = { fg = colors.green, style = "italic" },
-        DashboardHeader = { fg = colors.red },
-        DashboardShortCut = { fg = colors.blue },
     },
 }
 
