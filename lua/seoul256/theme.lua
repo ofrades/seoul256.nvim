@@ -177,7 +177,7 @@ M.treesitter = {
 -- Lsp highlight groups
 -- Type `:h lsp-highlight` for more informations
 M.lsp = {
-    LspCodeLens = { fg = colors.green }, -- TODO
+    LspCodeLens = { fg = colors.green },
     LspDiagnosticsDefaultError = { fg = colors.error },
     LspDiagnosticsDefaultHint = { fg = colors.purple },
     LspDiagnosticsDefaultInformation = { fg = colors.paleblue },
@@ -219,6 +219,14 @@ M.plugins = {
         diffFile = { fg = colors.blue },
         diffLine = { fg = colors.green },
         diffIndexLine = { fg = colors.purple },
+    },
+
+    Diagnostics = {
+      DiagnosticError = { fg = colors.error },
+      DiagnosticWarning = { fg = colors.yellow },
+      DiagnosticInformation = { fg = colors.paleblue },
+      DiagnosticHint = { fg = colors.purple },
+      DiagnosticTruncateLine = { fg = colors.fg },
     },
 
     Neogit = {
