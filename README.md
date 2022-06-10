@@ -3,6 +3,8 @@
 
 ## Based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim
 
+## Fork of (https://shaunsingh/seoul256.nvim)
+
 <img width="1260" alt="Screen Shot 2021-06-01 at 5 22 20 PM" src="https://user-images.githubusercontent.com/71196912/120392089-0073c180-c2fe-11eb-9614-d9d957dc1674.png">
 
 ## Features
@@ -13,22 +15,16 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 + Supported plugins:
     + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
     + [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-    + [Lsp Saga](https://github.com/glepnir/lspsaga.nvim)
     + [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
     + [Git Gutter](https://github.com/airblade/vim-gitgutter)
     + [git-messenger](https://github.com/rhysd/git-messenger.vim)
     + [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
     + [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-    + [Nvim-Tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
     + [NERDTree](https://github.com/preservim/nerdtree)
     + [vim-which-key](https://github.com/liuchengxu/vim-which-key)
     + [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
     + [WhichKey](https://github.com/liuchengxu/vim-which-key)
-    + [Dashboard](https://github.com/glepnir/dashboard-nvim)
-    + [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-    + [Lualine](https://github.com/hoob3rt/lualine.nvim)
     + [Neogit](https://github.com/TimUntersberger/neogit)
-    + [vim-sneak](https://github.com/justinmk/vim-sneak)
 
 + Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 

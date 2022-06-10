@@ -14,7 +14,7 @@ local colors = {
 
     accent = "#ce8f6b",
     active = "#545250",
-    bg = "#2F2F2F",
+    bg = "#3F2F2F",
     bg_alt = "#4C4C4C",
     border = "#414863",
     contrast = "#d4d4d4",
